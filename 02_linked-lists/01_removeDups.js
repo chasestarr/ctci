@@ -1,3 +1,5 @@
+const List = require('./00_list.js');
+
 function removeDups(list) {
   const memo = {};
   let current = list.head;
@@ -14,31 +16,6 @@ function removeDups(list) {
   }
 
   return list;
-}
-
-class List {
-  constructor() {
-    this.head = null;
-    this.tail = null;
-  }
-
-  add(value) {
-    const node = { value: value, next: null };
-    if (!this.head) this.head = node;
-    if (this.tail) this.tail.next = node;
-
-    this.tail = node;
-  }
-
-  print() {
-    let current = this.head;
-    console.log(current.value);
-
-    while (current.next) {
-      console.log(current.next.value);
-      current = current.next;
-    }
-  }
 }
 
 let l = new List();

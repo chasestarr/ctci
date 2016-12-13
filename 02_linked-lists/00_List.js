@@ -21,6 +21,18 @@ class List {
       current = current.next;
     }
   }
+
+  find(value) {
+    let current = this.head;
+
+    while (current) {
+      if (current.value === value) return current;
+
+      current = current.next;
+    }
+
+    return null;
+  }
 }
 
 module.exports = List;

@@ -12,6 +12,12 @@ class List {
     this.tail = node;
   }
 
+  removeHead() {
+    const temp = this.head;
+    this.head = this.head.next;
+    return temp;
+  }
+
   print() {
     let current = this.head;
     console.log(current.value);
